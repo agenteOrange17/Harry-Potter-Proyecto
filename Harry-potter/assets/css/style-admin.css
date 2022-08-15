@@ -1,0 +1,227 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Ramaraja';
+    background:  url("/Harry-potter/assets/img/background-comedor.webp") ;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+  }
+
+  #mail{
+    display: block;
+  }
+
+
+  #mail > .front {
+
+
+   width: 300px; 
+   height: 200px;
+   background:linear-gradient(#e3a03b, #B1a086) ;
+   border-width: 3px;
+  border-style: solid;
+  border-image: 
+    linear-gradient(
+      to bottom, 
+      #fff, 
+      rgba(0, 0, 0, 0)
+    ) 1 100%;
+   border-bottom-left-radius: 10px;
+   border-bottom-right-radius: 10px;
+   box-shadow: inset -30px -137px 50px -155px rgba(191, 174, 153, 1);
+   left: 40%;
+   top: 40%;
+   position: absolute;
+   perspective: 600px;
+   transform: perspective-3d;
+   backface-visibility: hidden;
+   transition: transform .5s linear 0s;
+   cursor: pointer;
+
+  }
+
+  #mail:hover > .front{
+    transform: rotateY(180deg);
+  }
+
+  #mail > .back{
+    width: 300px;
+    height: 200px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    position: absolute;
+    overflow: hidden;
+    perspective: 600px;
+    left: 40%;
+    top: 40%;
+    transform-style: preserve-3d;
+    cursor: pointer;
+  }
+
+  .back::before{
+    content: "";
+    top: 0;
+    position: absolute;
+    right: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid #c9a068;
+    border-top: 100px solid transparent;
+    border-bottom: 100px solid #d99559;
+    z-index: 1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+  }
+
+  .back::after{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 150px solid #c9a068;
+    border-right: 150px solid transparent;
+    border-top: 100px solid #d99559;
+    border-bottom: 100px solid transparent;
+    z-index: 1;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+  }
+
+  .cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-left: 150px solid transparent;
+    border-right: 150px solid transparent;
+    border-top: 100px solid #d99559;
+    border-bottom: 100px solid transparent;
+    transform-origin: top;
+    transform: rotate(0deg);
+  }
+
+  #mail:hover > .back {
+    transform: rotate(0deg); 
+  }
+
+  #seal{
+    height: 50px;
+    width: 50px;
+    position: relative;
+    top: 73px;
+    left: 122px;
+    z-index: 4;
+  }
+
+  #frntmsg{
+    text-align: center;
+    font-size: 20px;
+    color: #2c592f;
+    display: flex;
+    position: relative;
+    top: 25px;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+    font-weight: bolder;
+  }
+
+
+  /* Responsive */
+
+  @media (min-width: 300px) and (max-width:600px){
+
+    #mail > .front{
+      left: 24%;
+    }
+
+    #mail > .back {
+      left: 24%;
+    }
+
+    #text{
+        top: 37%;
+        left: 16%;
+    }
+  }
+
+  #hidden{
+    display: none;
+  }
+  .wrap {
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    bottom: 50%;
+  }
+  
+  .button {
+    width: 140px;
+    height: 45px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
+    }
+  
+  .button:hover {
+    background-color: #d99559;
+    box-shadow: 0px 15px 20px rgba(217, 149, 89, 1);
+    color: #fff;
+    transform: translateY(-7px);
+  }
+
+  .padre-flex{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+   
+  .padre-flex > img{
+    text-align: center;
+  }
+
+  #letter{
+    width: 500px;
+    height: 500px;
+    -webkit-mask: center/calc(100% - 1.85*30px)
+  }
+
+  #text{
+    color: #ff0000;
+    position: absolute;
+    text-transform: capitalize;
+    /* height: 100vh; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    padding: 35px;
+    font-size: 18px;
+    z-index: 6;
+    line-height: 2;
+  }
+
+
+  

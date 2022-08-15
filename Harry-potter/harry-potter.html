@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/style-web.css">
+    <script
+    src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+    crossorigin="anonymous"></script>
+    <title>Harry Potter web</title>
+    
+</head>
+<body>
+    
+    <div class="main-content">
+        <div class="map-base">
+          <div class="footsteps footsteps-1">
+            <div class="footstep left"></div>
+            <div class="footstep right"></div>
+            <div class="scroll-name"> 
+              <p>Severus Snape</p>
+            </div>
+          </div>
+          <div class="footsteps footsteps-2">
+            <div class="footstep left"></div>
+            <div class="footstep right"></div>
+            <div class="scroll-name"> 
+              <p>Harry Potter</p>
+            </div>
+          </div>
+          <div class="map-flap flap--1">
+            <div class="map-flap__front"></div>
+            <div class="map-flap__back"></div>
+          </div>
+          <div class="map-flap flap--2">
+            <div class="map-flap__front"></div>
+            <div class="map-flap__back"></div>
+          </div>
+          <div class="map-side side-1">
+            <div class="front" style="--image: url('https://meowlivia.s3.us-east-2.amazonaws.com/codepen/map/8.png')"></div>
+            <div class="back"></div>
+          </div>
+          <div class="map-side side-2">
+            <div class="front" style="--image: url('https://meowlivia.s3.us-east-2.amazonaws.com/codepen/map/18.png')"></div>
+            <div class="back"></div>
+          </div>
+          <div class="map-side side-3">
+            <div class="front" style="--image: url('https://meowlivia.s3.us-east-2.amazonaws.com/codepen/map/7.png')"></div>
+            <div class="back"></div>
+          </div>
+          <div class="map-side side-4">
+            <div class="front" style="--image: url('https://meowlivia.s3.us-east-2.amazonaws.com/codepen/map/10.png')"></div>
+          </div>
+          <div class="map-side side-5">
+            <div class="front" style="--image: url('https://meowlivia.s3.us-east-2.amazonaws.com/codepen/map/6.png')"></div>
+            <div class="back"></div>
+          </div>
+          <div class="map-side side-6">
+            <div class="front" style="--image: url('https://meowlivia.s3.us-east-2.amazonaws.com/codepen/map/11.png')"></div>
+            <div class="back"></div>
+          </div>
+        </div>
+      </div>
+      <div class="instructions">
+        <p>1. Habilita tu microfono primero.</p>
+        <p>2.El mapa se abrira si dices "Juro solemnemente que mis intenciones no son buenas"</p>
+        <p>3. El mapa se cerrará si dices "Travesura realizada!".</p>
+        <p>4. Recuerda hablar claro.</p><br/>
+        <p>Si no quieres utilizar el microfono pulsa el boton para abrir o cerrar el mapa</p>
+        <button class="toggle-map js-toggle">Abrir/Cerrar Mapa</button>
+      </div>
+
+
+      <script  src="node_modules/artyom.js/build/artyom.window.min.js"></script>
+      <script  src="./assets/js/merodeador.js"></script>
+</body>
+</html>

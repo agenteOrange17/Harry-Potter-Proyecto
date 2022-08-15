@@ -1,0 +1,166 @@
+
+@font-face { font-family: HarryPotter; src: url("/Harry-potter/assets/fonts/HARRP___.TTF");}
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'HarryPotter', sans-serif;
+    
+}
+.bg{
+    background:  url("/Harry-potter/assets/img/background-hp.jpg") ;
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+
+}
+
+:root{
+     cursor: url("/Harry-potter/assets/img/Wand.png"), auto; 
+    --X: 40vh;
+    --Y:45vw;
+}
+
+
+
+:root:before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background: radial-gradient(circle 10vmax at var(--X) var(--Y), 
+    rgba(0,0,0,0) 0%,
+    rgba(0,0,0,0.7) 80%,
+    rgba(0,0,0,0.95) 100%);
+    pointer-events: none;
+    z-index: 9999; 
+}
+
+
+.contenido{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+}
+
+.texto{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    width: 100%;
+}
+
+.texto h1 {
+    
+    font-size: 70px;
+    margin-top: 8px;
+}
+
+
+.botones{
+    display: flex;
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.button-play{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.text-play{
+    color: #fff;
+    font-size: 16px;
+}
+button{
+    width: 200px;
+    padding: 15px 0;
+    text-align: center;
+    border-radius: 25px;
+    font-weight: bold;
+    border: 2px solid #817b29;
+    background: transparent;
+    cursor: pointer;
+    margin: 10px;
+    font-size: 16px;
+}
+
+
+
+
+button a{
+    text-decoration: none;
+    color: #fff;
+}
+
+button:hover{
+    transition: .4s linear;
+    background-color: #817b29;
+    font-size: 20px;
+    align-items: center;
+}
+
+
+@media screen and (max-width:1100px){
+
+
+    button{
+        width: 180px;
+        padding: 15px 0;
+        text-align: center;
+    }
+}
+
+
+
+@media screen and (max-width:900px){
+
+    :root:before{
+        display: none;
+    }
+    .texto h1 {
+        font-size: 40px;
+        margin-top: 8px;
+    }
+
+    button{
+        width: 120px;
+        padding: 10px 0;
+        font-size: 14px;
+    }
+
+    .botones{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+
+}
+
+@media screen and (max-width:900px){
+
+    button{
+        width: 120px;
+     
+        font-size: 10px;
+    }
+}
+
+
+@media screen and (max-width:560px){
+    .botones{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+         }
+}
